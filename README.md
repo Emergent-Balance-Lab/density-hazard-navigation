@@ -17,11 +17,11 @@ Engineering & System Safety*, 277 (2027), 113181.
 - **Personal GitHub account (shyr):**
   [Shyr0796](https://github.com/Shyr0796)
 - **Canonical EBL Laboratory repository:**
-  [rui-research/density-hazard-navigation](https://github.com/rui-research/density-hazard-navigation)
+  [Emergent-Balance-Lab/density-hazard-navigation](https://github.com/Emergent-Balance-Lab/density-hazard-navigation)
 
 The EBL Laboratory repository is the sole canonical location for the complete
-code, data, and figure package. Personal or laboratory-profile repositories
-should contain only a short README that redirects readers to this repository.
+code, data, and figure package. The `Shyr0796` and `rui-research` repositories
+contain only informational README files that redirect readers here.
 
 ## Reproducibility package
 
@@ -96,7 +96,7 @@ through Git LFS. Install Git LFS before cloning or downloading all result data:
 
 ```bash
 git lfs install
-git clone https://github.com/rui-research/density-hazard-navigation.git
+git clone https://github.com/Emergent-Balance-Lab/density-hazard-navigation.git
 cd density-hazard-navigation
 git lfs pull
 ```
