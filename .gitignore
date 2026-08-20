@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Publisher-formatted article PDF (Elsevier, all rights reserved)
+Coupled density–hazard navigation for evacuation reliability in dense urban.pdf
+
+# Generated scratch outputs
+tmp/
+build/
+
+# Never publish simulator implementation or compiled artifacts here
+*.c
+*.cc
+*.cpp
+*.cxx
+*.cu
+*.cuh
+*.h
+*.hh
+*.hpp
+*.hxx
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app

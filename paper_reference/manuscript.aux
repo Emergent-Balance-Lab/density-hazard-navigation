@@ -1,0 +1,422 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\emailauthor{csong945@connect.hkust-gz.edu.cn}{Chun Song}
+\emailauthor{linxuchuan@iem.ac.cn}{Xuchuan Lin}
+\emailauthor{ruicao@hkust-gz.edu.cn}{Rui Cao\corref {cor1}}
+\Newlabel{cor1}{1}
+\def\@LN@column{1}
+\Newlabel{aff1}{a}
+\Newlabel{aff2}{b}
+\Newlabel{aff3}{c}
+\citation{cao2025mapping}
+\citation{Al2014Villages_UHPress,Lin2011GuangzhouVIC}
+\citation{Helbing1995SocialForce}
+\citation{BlueAdler2001CA,Burstedde2001FloorField}
+\citation{Hughes2002Continuum}
+\citation{Darvishan2021DynamicReroute}
+\citation{Liu2022EvacAccessibility}
+\citation{Ding2024BIMFireEvac}
+\citation{Golshani2025FireNavigation}
+\citation{He2024RiskPerceptionPath,Luan2025ToxicGasAirport}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{2}{Introduction}{section.1}{}}
+\def\@LN@column{1}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{4}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{4}{Related Work}{section.2}{}}
+\citation{Helbing1995SocialForce}
+\citation{BlueAdler2001CA,Burstedde2001FloorField}
+\citation{Hughes2002Continuum,Treuille2006ContinuumCrowds}
+\citation{Berggold2026MLReview,Li2023ELMEvacRisk,Lu2026HumanAI}
+\citation{Kretz2009DynamicPotential}
+\citation{Sethian1996FastMarching,Zhao2005FastSweeping}
+\citation{Ding2024BIMFireEvac}
+\citation{Golshani2025FireNavigation}
+\citation{He2024RiskPerceptionPath,He2024DynamicMultiHazardEvac,Luan2025ToxicGasAirport,Yang2025MetroStampede}
+\citation{Yuan2022SafetyBarrierEvac,Guo2024StampedeTerrorist}
+\citation{Zhang2024SimOptGuidance,Huang2023DSA_DDQN}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Pedestrian dynamics models as guidance fields}{5}{subsection.2.1}\protected@file@percent }
+\newlabel{sec:rw_basic}{{2.1}{5}{Pedestrian dynamics models as guidance fields}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Dynamic and risk-aware guidance: progress and remaining gaps}{5}{subsection.2.2}\protected@file@percent }
+\newlabel{sec:rw_nav}{{2.2}{5}{Dynamic and risk-aware guidance: progress and remaining gaps}{subsection.2.2}{}}
+\citation{Rockafellar2002CVaR}
+\citation{Kim2023RadiologicalEvac,Ma2024AirportPassengerFlow,Wang2022RoRoEvac,Lovreglio2019SamplingConvergence,Darvishan2021DynamicReroute}
+\citation{Al2014Villages_UHPress,Lin2011GuangzhouVIC,cao2025mapping}
+\citation{Butters2025Kibera}
+\citation{Kuligowski2025Humanitarian}
+\citation{Liu2025LiDARInformal}
+\citation{Liu2022EvacAccessibility}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Reliability-oriented evaluation and informal-settlement benchmarks}{6}{subsection.2.3}\protected@file@percent }
+\newlabel{sec:rw_eval}{{2.3}{6}{Reliability-oriented evaluation and informal-settlement benchmarks}{subsection.2.3}{}}
+\citation{Golshani2025FireNavigation}
+\citation{Ding2024BIMFireEvac,He2024DynamicMultiHazardEvac,Luan2025ToxicGasAirport}
+\citation{Kretz2009DynamicPotential}
+\citation{Butters2025Kibera,Kuligowski2025Humanitarian}
+\citation{Kretz2009DynamicPotential}
+\citation{Ding2024BIMFireEvac}
+\citation{Golshani2025FireNavigation}
+\citation{He2024DynamicMultiHazardEvac}
+\citation{Luan2025ToxicGasAirport}
+\citation{Butters2025Kibera}
+\citation{Kuligowski2025Humanitarian}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Positioning of this work}{7}{subsection.2.4}\protected@file@percent }
+\newlabel{sec:rw_position}{{2.4}{7}{Positioning of this work}{subsection.2.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Positioning against the closest dynamic and risk-aware evacuation works. Treatment describes how hazard and congestion enter the model; guidance distinguishes online route updates from fixed or scenario-level route choices.}}{8}{table.1}\protected@file@percent }
+\newlabel{tab:comparator}{{1}{8}{Positioning against the closest dynamic and risk-aware evacuation works. Treatment describes how hazard and congestion enter the model; guidance distinguishes online route updates from fixed or scenario-level route choices}{table.1}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{9}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{9}{Methodology}{section.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Principal notation used in the methodology.}}{10}{table.2}\protected@file@percent }
+\newlabel{tab:notation}{{2}{10}{Principal notation used in the methodology}{table.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Framework of the proposed dynamic navigation model. Pedestrian positions are projected onto the raster to construct the SPH density field $\rho (\mathbf  {p},t)$, which is mapped through the calibrated fundamental diagram to a speed field $v(\mathbf  {p},t)$ and a slowness field $c_p(\mathbf  {p},t)$. The subscript $p$ denotes the pedestrian mobility-cost channel. In parallel, an arrival-time-driven hazard model produces a continuous hazard field $R(\mathbf  {p},t)$ and a hard-blocking mask $B(\mathbf  {p},t)$. These routing components are distinct from the outcome metrics Soft Risk $\Sigma _s$ and Hard Harm $H$ defined in \S  \ref {sec:eval_exposure}. They are combined into a single cost field that defines the global navigation potential $\Phi (\mathbf  {p},t)$. Agent motion is determined by a density-dependent blend of the global direction $-\nabla \Phi $ and local interaction forces; agent positions feed back into the density field, closing the loop.}}{11}{figure.1}\protected@file@percent }
+\newlabel{fig:framework}{{1}{11}{Framework of the proposed dynamic navigation model. Pedestrian positions are projected onto the raster to construct the SPH density field $\rho (\mathbf {p},t)$, which is mapped through the calibrated fundamental diagram to a speed field $v(\mathbf {p},t)$ and a slowness field $c_p(\mathbf {p},t)$. The subscript $p$ denotes the pedestrian mobility-cost channel. In parallel, an arrival-time-driven hazard model produces a continuous hazard field $R(\mathbf {p},t)$ and a hard-blocking mask $B(\mathbf {p},t)$. These routing components are distinct from the outcome metrics Soft Risk $\Sigma _s$ and Hard Harm $H$ defined in \S \ref {sec:eval_exposure}. They are combined into a single cost field that defines the global navigation potential $\Phi (\mathbf {p},t)$. Agent motion is determined by a density-dependent blend of the global direction $-\nabla \Phi $ and local interaction forces; agent positions feed back into the density field, closing the loop}{figure.1}{}}
+\citation{Monaghan1992SPH,muller2003particle}
+\citation{muller2003particle}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Raster representation}{12}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:raster}{{3.1}{12}{Raster representation}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Density field and mobility cost}{12}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:density}{{3.2}{12}{Density field and mobility cost}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}SPH density estimation}{12}{subsubsection.3.2.1}\protected@file@percent }
+\newlabel{sec:density_estimation}{{3.2.1}{12}{SPH density estimation}{subsubsection.3.2.1}{}}
+\newlabel{eq:sph_density_agent}{{1}{12}{SPH density estimation}{equation.1}{}}
+\newlabel{eq:poly6_kernel}{{2}{12}{SPH density estimation}{equation.2}{}}
+\citation{weidmann1993fundamental,Helbing1995SocialForce}
+\def\@LN@column{1}
+\newlabel{eq:sph_density_grid}{{3}{13}{SPH density estimation}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Sanity check of the SPH estimator}{13}{subsubsection.3.2.2}\protected@file@percent }
+\newlabel{sec:density_check}{{3.2.2}{13}{Sanity check of the SPH estimator}{subsubsection.3.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Speed--density relation and slowness field}{13}{subsubsection.3.2.3}\protected@file@percent }
+\newlabel{sec:speed_density_cost}{{3.2.3}{13}{Speed--density relation and slowness field}{subsubsection.3.2.3}{}}
+\newlabel{eq:speed_field}{{5}{13}{Speed--density relation and slowness field}{equation.5}{}}
+\citation{Sethian1996FastMarching}
+\citation{Sethian1996FastMarching,Zhao2005FastSweeping}
+\def\@LN@column{1}
+\newlabel{eq:slowness_field}{{6}{14}{Speed--density relation and slowness field}{equation.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Hazard field}{14}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:hazard_field}{{3.3}{14}{Hazard field}{subsection.3.3}{}}
+\newlabel{eq:hazard_arrival}{{7}{14}{Hazard field}{equation.7}{}}
+\newlabel{eq:hazard_intensity}{{8}{14}{Hazard field}{equation.8}{}}
+\newlabel{eq:hazard_blocking}{{9}{14}{Hazard field}{equation.9}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Density--hazard coupled global potential}{15}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:potential}{{3.4}{15}{Density--hazard coupled global potential}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Continuous formulation}{15}{subsubsection.3.4.1}\protected@file@percent }
+\newlabel{sec:phi_continuous}{{3.4.1}{15}{Continuous formulation}{subsubsection.3.4.1}{}}
+\newlabel{eq:phi_continuous}{{10}{15}{Continuous formulation}{equation.10}{}}
+\citation{Sethian1996FastMarching}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Composition of the dynamic cost field. The density-driven slowness $c_p$, continuous hazard cost $R$, and hard-blocking mask $B$ are combined into a single cost surface whose Bellman shortest-arrival solution gives the global potential $\Phi (\mathbf  {p},t)$. The navigation direction is the normalised negative gradient of $\Phi $, allowing pedestrians to avoid both congestion and hazardous regions while moving toward exits. Here $R$ and $B$ are routing inputs; Soft Risk $\Sigma _s$ and Hard Harm $H$ are evaluation outcomes and are not additional terms in the potential.}}{16}{figure.2}\protected@file@percent }
+\newlabel{fig:densityaware}{{2}{16}{Composition of the dynamic cost field. The density-driven slowness $c_p$, continuous hazard cost $R$, and hard-blocking mask $B$ are combined into a single cost surface whose Bellman shortest-arrival solution gives the global potential $\Phi (\mathbf {p},t)$. The navigation direction is the normalised negative gradient of $\Phi $, allowing pedestrians to avoid both congestion and hazardous regions while moving toward exits. Here $R$ and $B$ are routing inputs; Soft Risk $\Sigma _s$ and Hard Harm $H$ are evaluation outcomes and are not additional terms in the potential}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Discrete update on the raster}{16}{subsubsection.3.4.2}\protected@file@percent }
+\newlabel{sec:phi_discrete}{{3.4.2}{16}{Discrete update on the raster}{subsubsection.3.4.2}{}}
+\newlabel{eq:edge_cost}{{11}{16}{Discrete update on the raster}{equation.11}{}}
+\citation{muller2003particle}
+\def\@LN@column{1}
+\newlabel{eq:phi_discrete}{{12}{17}{Discrete update on the raster}{equation.12}{}}
+\newlabel{eq:nav_dir}{{13}{17}{Discrete update on the raster}{equation.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Online update strategy}{17}{subsubsection.3.4.3}\protected@file@percent }
+\newlabel{sec:online_update}{{3.4.3}{17}{Online update strategy}{subsubsection.3.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Density-aware local interaction}{17}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:interaction_model}{{3.5}{17}{Density-aware local interaction}{subsection.3.5}{}}
+\newlabel{eq:spiky_kernel}{{14}{17}{Density-aware local interaction}{equation.14}{}}
+\newlabel{eq:spiky_gradient}{{15}{17}{Density-aware local interaction}{equation.15}{}}
+\citation{Helbing1995SocialForce}
+\def\@LN@column{1}
+\newlabel{eq:pressure_mapping}{{16}{18}{Density-aware local interaction}{equation.16}{}}
+\newlabel{eq:interaction_force_spiky}{{17}{18}{Density-aware local interaction}{equation.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Global--local blending and motion update}{18}{subsection.3.6}\protected@file@percent }
+\newlabel{sec:motion_update}{{3.6}{18}{Global--local blending and motion update}{subsection.3.6}{}}
+\newlabel{eq:global_dir}{{18}{18}{Global--local blending and motion update}{equation.18}{}}
+\newlabel{eq:lambda_blend}{{19}{18}{Global--local blending and motion update}{equation.19}{}}
+\newlabel{eq:blend_dir}{{20}{18}{Global--local blending and motion update}{equation.20}{}}
+\def\@LN@column{1}
+\newlabel{eq:desired_speed}{{21}{19}{Global--local blending and motion update}{equation.21}{}}
+\newlabel{eq:state_update}{{22}{19}{Global--local blending and motion update}{equation.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Implementation}{19}{subsection.3.7}\protected@file@percent }
+\newlabel{sec:implementation}{{3.7}{19}{Implementation}{subsection.3.7}{}}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Model and strategy parameters. Calibrated and strategy-specific values are reported in the indicated section.}}{21}{table.3}\protected@file@percent }
+\newlabel{tab:params_summary}{{3}{21}{Model and strategy parameters. Calibrated and strategy-specific values are reported in the indicated section}{table.3}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation Metrics and Assessment Protocol}{22}{section.4}\protected@file@percent }
+\newlabel{sec:evaluation}{{4}{22}{Evaluation Metrics and Assessment Protocol}{section.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Compact index of core metrics and auxiliary diagnostics used across the calibration, strategy-evaluation, and Shipai analyses. Spatial diagnostics ($\dagger $) are detailed in \appref  {sm:spatial_diagnostics}; local validation and computation diagnostics are defined where they are used.}}{23}{table.4}\protected@file@percent }
+\newlabel{tab:metric_summary}{{4}{23}{Compact index of core metrics and auxiliary diagnostics used across the calibration, strategy-evaluation, and Shipai analyses. Spatial diagnostics ($\dagger $) are detailed in \appref {sm:spatial_diagnostics}; local validation and computation diagnostics are defined where they are used}{table.4}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Efficiency}{24}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:eval_efficiency}{{4.1}{24}{Efficiency}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Soft Risk and Hard Harm}{24}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:eval_exposure}{{4.2}{24}{Soft Risk and Hard Harm}{subsection.4.2}{}}
+\newlabel{eq:exposure}{{23}{24}{Soft Risk and Hard Harm}{equation.23}{}}
+\newlabel{eq:soft_risk_population}{{24}{24}{Soft Risk and Hard Harm}{equation.24}{}}
+\def\@LN@column{1}
+\newlabel{eq:threshold_exceedance}{{25}{25}{Soft Risk and Hard Harm}{equation.25}{}}
+\citation{Rockafellar2002CVaR}
+\citation{He2024DynamicMultiHazardEvac,Luan2025ToxicGasAirport,Yang2025MetroStampede}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Congestion}{26}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:eval_congestion}{{4.3}{26}{Congestion}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Reliability and tail risk}{26}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:eval_reliability}{{4.4}{26}{Reliability and tail risk}{subsection.4.4}{}}
+\newlabel{eq:reliability}{{26}{26}{Reliability and tail risk}{equation.26}{}}
+\newlabel{eq:cvar}{{27}{26}{Reliability and tail risk}{equation.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Assessment protocol}{26}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:assessment_protocol}{{4.5}{26}{Assessment protocol}{subsection.4.5}{}}
+\newlabel{eq:ensemble_summaries}{{28}{26}{Assessment protocol}{equation.28}{}}
+\citation{seyfried2005fundamental,zhang2013empirical}
+\def\@LN@column{1}
+\newlabel{eq:reliability_mc}{{29}{27}{Assessment protocol}{equation.29}{}}
+\newlabel{eq:cvar_mc}{{30}{27}{Assessment protocol}{equation.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Model Calibration and Validation}{27}{section.5}\protected@file@percent }
+\newlabel{sec:calibration_validation}{{5}{27}{Model Calibration and Validation}{section.5}{}}
+\citation{seyfried2005fundamental,zhang2013empirical}
+\citation{zhang2013empirical}
+\citation{zhang2013empirical}
+\citation{zhang2013empirical}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Micro-level calibration: fundamental diagram}{28}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:calibration_fd}{{5.1}{28}{Micro-level calibration: fundamental diagram}{subsection.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Empirical speed--density (left) and flow--density (right) relationships from corridor experiments~\citep  {zhang2013empirical}. The sample cloud is obtained by mixed sampling from eight independent evacuation trajectory files, corresponding to eight crowd experiments; colours indicate the source file and the black curves show binned medians. The aggregated relationships are used here as the calibration target.}}{28}{figure.3}\protected@file@percent }
+\newlabel{fig:fundamental_diagram_obs}{{3}{28}{Empirical speed--density (left) and flow--density (right) relationships from corridor experiments~\citep {zhang2013empirical}. The sample cloud is obtained by mixed sampling from eight independent evacuation trajectory files, corresponding to eight crowd experiments; colours indicate the source file and the black curves show binned medians. The aggregated relationships are used here as the calibration target}{figure.3}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Meso-level validation: geometric flow capacity}{29}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:validation_flow_width}{{5.2}{29}{Meso-level validation: geometric flow capacity}{subsection.5.2}{}}
+\citation{weidmann1993fundamental,seyfried2005fundamental,zhang2013empirical}
+\citation{zhang2012turning,zhang2013tjunction}
+\citation{dias2022bend}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Canonical corridor configurations used for meso-level validation: (a) straight, (b) L-shaped, and (c) T-shaped, isolating the effects of width, turning, and merging on flow capacity.}}{30}{figure.4}\protected@file@percent }
+\newlabel{fig:corridor_geometries}{{4}{30}{Canonical corridor configurations used for meso-level validation: (a) straight, (b) L-shaped, and (c) T-shaped, isolating the effects of width, turning, and merging on flow capacity}{figure.4}{}}
+\newlabel{eq:flow_width}{{31}{30}{Meso-level validation: geometric flow capacity}{equation.31}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Fitted simulation capacities from the 72-run screened analysis and the scope of external comparison. Only the straight corridor has a directly comparable empirical capacity range; the bend and T-junction sources provide qualitative spatial-flow evidence under fixed, different geometries.}}{31}{table.5}\protected@file@percent }
+\newlabel{tab:flow_width_val}{{5}{31}{Fitted simulation capacities from the 72-run screened analysis and the scope of external comparison. Only the straight corridor has a directly comparable empirical capacity range; the bend and T-junction sources provide qualitative spatial-flow evidence under fixed, different geometries}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Three-way comparison of simulated flow--width relationships. Faint symbols denote retained runs, large symbols and error bars show the per-width mean $\pm $ one standard deviation, and solid coloured lines are origin-constrained OLS fits. Grey crosses identify the three high-duration runs flagged by the stated completion-time rule. The blue band is the published straight-corridor capacity range $C=1.6$--$2.2$\,person/(m$\cdot $s); no empirical band is assigned to the fixed-width L-corner or T-junction studies. The T-junction series is total two-branch inflow, whereas Table~\ref {tab:flow_width_val} reports its symmetric per-arm equivalent.}}{32}{figure.5}\protected@file@percent }
+\newlabel{fig:flow_width_validation}{{5}{32}{Three-way comparison of simulated flow--width relationships. Faint symbols denote retained runs, large symbols and error bars show the per-width mean $\pm $ one standard deviation, and solid coloured lines are origin-constrained OLS fits. Grey crosses identify the three high-duration runs flagged by the stated completion-time rule. The blue band is the published straight-corridor capacity range $C=1.6$--$2.2$\,person/(m$\cdot $s); no empirical band is assigned to the fixed-width L-corner or T-junction studies. The T-junction series is total two-branch inflow, whereas Table~\ref {tab:flow_width_val} reports its symmetric per-arm equivalent}{figure.5}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Strategy Calibration on a Simplified Network}{33}{section.6}\protected@file@percent }
+\newlabel{sec:strategy_calibration}{{6}{33}{Strategy Calibration on a Simplified Network}{section.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Simplified calibration network used for the strategy sensitivity experiments. Grey polygons denote built-up or non-walkable blocks, white corridors denote the pedestrian movement network, and circled green markers denote boundary exits. The reduced geometry preserves narrow alleys, irregular junctions, competing route families, and multiple evacuation destinations while substantially reducing simulation cost relative to the full Shipai benchmark.}}{34}{figure.6}\protected@file@percent }
+\newlabel{fig:simplified_network}{{6}{34}{Simplified calibration network used for the strategy sensitivity experiments. Grey polygons denote built-up or non-walkable blocks, white corridors denote the pedestrian movement network, and circled green markers denote boundary exits. The reduced geometry preserves narrow alleys, irregular junctions, competing route families, and multiple evacuation destinations while substantially reducing simulation cost relative to the full Shipai benchmark}{figure.6}{}}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Main comparison strategies at the selected operating point, expressed as complete parameter configurations of the unified framework (Eq.~\ref {eq:phi_continuous}).}}{35}{table.6}\protected@file@percent }
+\newlabel{tab:strategy_mapping}{{6}{35}{Main comparison strategies at the selected operating point, expressed as complete parameter configurations of the unified framework (Eq.~\ref {eq:phi_continuous})}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Hazard-weight calibration}{35}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:beta_calibration}{{6.1}{35}{Hazard-weight calibration}{subsection.6.1}{}}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces $\beta $-sensitivity of Density--Hazard. Values for $T_{0.95}^{(k)}$, $T_{0.99}^{(k)}$, and $\Sigma _s^{(k)}$ are summarised by the cross-run 95th quantile $Q_{0.95,K}[\cdot ]$ with 95\% bootstrap CIs; $H^{(k)}$ is summarised by the cross-run mean $\mu _K[H]$. Hard Harm is a threshold-event tally in agent--time-step pairs, whereas Soft Risk $\Sigma _s$ is reported in $10^6$ risk-score--person--time-step units. The paired sweep uses $K=49$ runs after the prespecified IQR filter; the highlighted $\beta = 1.0$ row is the recommended operating point.}}{36}{table.7}\protected@file@percent }
+\newlabel{tab:beta_sensitivity}{{7}{36}{$\beta $-sensitivity of Density--Hazard. Values for $T_{0.95}^{(k)}$, $T_{0.99}^{(k)}$, and $\Sigma _s^{(k)}$ are summarised by the cross-run 95th quantile $Q_{0.95,K}[\cdot ]$ with 95\% bootstrap CIs; $H^{(k)}$ is summarised by the cross-run mean $\mu _K[H]$. Hard Harm is a threshold-event tally in agent--time-step pairs, whereas Soft Risk $\Sigma _s$ is reported in $10^6$ risk-score--person--time-step units. The paired sweep uses $K=49$ runs after the prespecified IQR filter; the highlighted $\beta = 1.0$ row is the recommended operating point}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Trend summary across $\beta $ in the paired sensitivity sweep. Lower is better on every metric.}}{36}{table.8}\protected@file@percent }
+\newlabel{tab:ranking_stability}{{8}{36}{Trend summary across $\beta $ in the paired sensitivity sweep. Lower is better on every metric}{table.8}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Trade-off analysis across $\beta $ (in s/m). Left: monotonic efficiency--exposure trade-off, with $\beta = 1.0$ marking a knee before the high-$\beta $ time penalty dominates. Right: Hard Harm decreases with $\beta $ and is eliminated at $\beta \ge 5.0$, while $\beta = 1.0$ nearly eliminates Hard Harm without the high-$\beta $ detour cost. Static (square) and Density-aware (diamond) are shown for reference; points show filtered paired estimates ($K=49$).}}{37}{figure.7}\protected@file@percent }
+\newlabel{fig:beta_tradeoff_combined}{{7}{37}{Trade-off analysis across $\beta $ (in s/m). Left: monotonic efficiency--exposure trade-off, with $\beta = 1.0$ marking a knee before the high-$\beta $ time penalty dominates. Right: Hard Harm decreases with $\beta $ and is eliminated at $\beta \ge 5.0$, while $\beta = 1.0$ nearly eliminates Hard Harm without the high-$\beta $ detour cost. Static (square) and Density-aware (diamond) are shown for reference; points show filtered paired estimates ($K=49$)}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Field-update-period calibration}{37}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:update_period}{{6.2}{37}{Field-update-period calibration}{subsection.6.2}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Pareto trade-off between evacuation quality and computation cost for the pure-distance Static reference and five Density-aware update periods. (a) $\mu _{20}[T_{0.95}]$ vs.\ $\mu _{20}[C_{\mathrm  {tot}}]$; (b) $\mu _{20}[M^{+}_{8}]$ vs.\ $\mu _{20}[C_{\mathrm  {field}}]$. Dashed curves connect dynamic configurations in order of increasing $\Delta t_u$; static baseline shown as a filled square. Error bars: 95\% bootstrap CI.}}{38}{figure.8}\protected@file@percent }
+\newlabel{fig:tradeoff}{{8}{38}{Pareto trade-off between evacuation quality and computation cost for the pure-distance Static reference and five Density-aware update periods. (a) $\mu _{20}[T_{0.95}]$ vs.\^^M$\mu _{20}[C_{\mathrm {tot}}]$; (b) $\mu _{20}[M^{+}_{8}]$ vs.\^^M$\mu _{20}[C_{\mathrm {field}}]$. Dashed curves connect dynamic configurations in order of increasing $\Delta t_u$; static baseline shown as a filled square. Error bars: 95\% bootstrap CI}{figure.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Sensitivity of four performance metrics to $\Delta t_u$ (log-scaled axis): (a) $\mu _{20}[T_{0.95}]$, (b) $\mu _{20}[T_{0.99}]$, (c) $\mu _{20}[M^{+}_{8}]$, and (d) $\mu _{20}[N^{+}_{8}]$. Shaded bands: 95\% bootstrap CI; horizontal dashed: static baseline. The metric-specific change-point markers are located at \SI {60}{s} in panels (a)--(b) and \SI {30}{s} in panels (c)--(d).}}{39}{figure.9}\protected@file@percent }
+\newlabel{fig:diminishing}{{9}{39}{Sensitivity of four performance metrics to $\Delta t_u$ (log-scaled axis): (a) $\mu _{20}[T_{0.95}]$, (b) $\mu _{20}[T_{0.99}]$, (c) $\mu _{20}[M^{+}_{8}]$, and (d) $\mu _{20}[N^{+}_{8}]$. Shaded bands: 95\% bootstrap CI; horizontal dashed: static baseline. The metric-specific change-point markers are located at \SI {60}{s} in panels (a)--(b) and \SI {30}{s} in panels (c)--(d)}{figure.9}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Cross-run-mean computation-time decomposition vs.\ $\Delta t_u$. Circles: $\mu _{20}[C_{\mathrm  {tot}}]$; squares: $\mu _{20}[C_{\mathrm  {field}}]$; triangles (right axis): dynamic-field fraction of total runtime. Error bands: 95\% bootstrap CI; horizontal axis log-scaled.}}{40}{figure.10}\protected@file@percent }
+\newlabel{fig:compute_cost}{{10}{40}{Cross-run-mean computation-time decomposition vs.\ $\Delta t_u$. Circles: $\mu _{20}[C_{\mathrm {tot}}]$; squares: $\mu _{20}[C_{\mathrm {field}}]$; triangles (right axis): dynamic-field fraction of total runtime. Error bands: 95\% bootstrap CI; horizontal axis log-scaled}{figure.10}{}}
+\citation{guangzhouTianhe2023ShipaiMap,pixelNotes2019Shipai}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Case Study: Shipai Village}{41}{section.7}\protected@file@percent }
+\newlabel{sec:shipai}{{7}{41}{Case Study: Shipai Village}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Benchmark setting and strategies}{41}{subsection.7.1}\protected@file@percent }
+\newlabel{sec:shipai_benchmark}{{7.1}{41}{Benchmark setting and strategies}{subsection.7.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Shipai Village benchmark. The layout figure shows the remote-sensing base map (a), building footprints (b), and pedestrian network (c) used to construct the full-scale evacuation domain. The morphology combines dense building blocks, narrow alley corridors, and multiple boundary exits, providing a realistic stress test for dynamic evacuation guidance in maze-like urban villages.}}{42}{figure.11}\protected@file@percent }
+\newlabel{fig:shipai_layout}{{11}{42}{Shipai Village benchmark. The layout figure shows the remote-sensing base map (a), building footprints (b), and pedestrian network (c) used to construct the full-scale evacuation domain. The morphology combines dense building blocks, narrow alley corridors, and multiple boundary exits, providing a realistic stress test for dynamic evacuation guidance in maze-like urban villages}{figure.11}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Aggregate performance metrics}{43}{subsection.7.2}\protected@file@percent }
+\newlabel{sec:shipai_metrics}{{7.2}{43}{Aggregate performance metrics}{subsection.7.2}{}}
+\newlabel{eq:cum_metrics}{{32}{43}{Aggregate performance metrics}{equation.32}{}}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Performance summary for the Shipai full-scenario benchmark ($K = 50$ runs per strategy). The dynamic settings use the operating point calibrated on the simplified network and are then evaluated on the full Shipai domain. Every entry is a cross-run mean $\mu _{50}[\cdot ]$ with a 95\% marginal bootstrap CI; $\Sigma _s$ (Soft Risk) is reported in $10^6$ risk-score--person--time-step units and $H$ (Hard Harm) in $10^3$ agent--time-step pairs; $\Delta $ denotes relative improvement over Static; bold marks the column-best mean. Paired contrasts between Density-60 and DH-60 are reported in the text.}}{44}{table.9}\protected@file@percent }
+\newlabel{tab:results_compact}{{9}{44}{Performance summary for the Shipai full-scenario benchmark ($K = 50$ runs per strategy). The dynamic settings use the operating point calibrated on the simplified network and are then evaluated on the full Shipai domain. Every entry is a cross-run mean $\mu _{50}[\cdot ]$ with a 95\% marginal bootstrap CI; $\Sigma _s$ (Soft Risk) is reported in $10^6$ risk-score--person--time-step units and $H$ (Hard Harm) in $10^3$ agent--time-step pairs; $\Delta $ denotes relative improvement over Static; bold marks the column-best mean. Paired contrasts between Density-60 and DH-60 are reported in the text}{table.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Spatial redistribution mechanisms}{44}{subsection.7.3}\protected@file@percent }
+\newlabel{sec:shipai_spatial_mechanisms}{{7.3}{44}{Spatial redistribution mechanisms}{subsection.7.3}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Quantitative Static-relative reductions in the Shipai spatial fields. For each strategy, the fields are first averaged cellwise over the 50 paired Shipai scenarios, and all summaries are then restricted to the shared walkable-road mask $\mathcal  {R}$. Panel (a) summarises the cumulative density-load field $L_{\rho }$ through $\DOTSB \sum@ \slimits@ _{\mathbf  {p}\in \mathcal  {R}}L_{\rho }(\mathbf  {p})$, $Q^{+}_{0.95}(L_{\rho })$, and $N^{s}_{>0.99}(L_{\rho })$. Panel (b) summarises the congestion-duration field $T_{\mathrm  {cong}}$ through $Q^{+}_{0.95}(T_{\mathrm  {cong}})$ and $N^{s}_{>0.99}(T_{\mathrm  {cong}})$.}}{45}{figure.12}\protected@file@percent }
+\newlabel{fig:shipai_spatial_reduction}{{12}{45}{Quantitative Static-relative reductions in the Shipai spatial fields. For each strategy, the fields are first averaged cellwise over the 50 paired Shipai scenarios, and all summaries are then restricted to the shared walkable-road mask $\mathcal {R}$. Panel (a) summarises the cumulative density-load field $L_{\rho }$ through $\sum _{\mathbf {p}\in \mathcal {R}}L_{\rho }(\mathbf {p})$, $Q^{+}_{0.95}(L_{\rho })$, and $N^{s}_{>0.99}(L_{\rho })$. Panel (b) summarises the congestion-duration field $T_{\mathrm {cong}}$ through $Q^{+}_{0.95}(T_{\mathrm {cong}})$ and $N^{s}_{>0.99}(T_{\mathrm {cong}})$}{figure.12}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Representative spatial evacuation fields for one paired Shipai scenario. Columns compare Static, Density-60, and DH-60, respectively. Rows show three accumulated spatial diagnostics: $F_{\mathrm  {route}}(\mathbf  {p})$, $L_{\rho }(\mathbf  {p})$, and $T_{\mathrm  {cong}}(\mathbf  {p})$. Each row preserves its own colour scale, enabling within-metric comparison of how the three routing strategies redistribute persistent corridor use, crowd load, and congestion duration within this illustrative simulation. Aggregate Static-relative reductions are quantified in Figure~\ref {fig:shipai_spatial_reduction}.}}{47}{figure.13}\protected@file@percent }
+\newlabel{fig:shipai_maps}{{13}{47}{Representative spatial evacuation fields for one paired Shipai scenario. Columns compare Static, Density-60, and DH-60, respectively. Rows show three accumulated spatial diagnostics: $F_{\mathrm {route}}(\mathbf {p})$, $L_{\rho }(\mathbf {p})$, and $T_{\mathrm {cong}}(\mathbf {p})$. Each row preserves its own colour scale, enabling within-metric comparison of how the three routing strategies redistribute persistent corridor use, crowd load, and congestion duration within this illustrative simulation. Aggregate Static-relative reductions are quantified in Figure~\ref {fig:shipai_spatial_reduction}}{figure.13}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Hazard-source location stratification}{48}{subsection.7.4}\protected@file@percent }
+\newlabel{sec:shipai_source_location}{{7.4}{48}{Hazard-source location stratification}{subsection.7.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Case-study synthesis}{48}{subsection.7.5}\protected@file@percent }
+\newlabel{sec:shipai_synthesis}{{7.5}{48}{Case-study synthesis}{subsection.7.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{48}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{8}{48}{Discussion}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Efficiency--Safety Decoupling}{48}{subsection.8.1}\protected@file@percent }
+\newlabel{sec:disc_coupling}{{8.1}{48}{Efficiency--Safety Decoupling}{subsection.8.1}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}What Transfers Across Scales, and What Does Not}{49}{subsection.8.2}\protected@file@percent }
+\newlabel{sec:disc_transfer}{{8.2}{49}{What Transfers Across Scales, and What Does Not}{subsection.8.2}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Limitations and Future Directions}{50}{subsection.8.3}\protected@file@percent }
+\newlabel{sec:limitations}{{8.3}{50}{Limitations and Future Directions}{subsection.8.3}{}}
+\def\@LN@column{1}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{52}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{52}{Conclusion}{section.9}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\let\numberline\tmptocnumberline}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix~A}SPH Density-Estimator Sanity Check}{53}{appendix.A}\protected@file@percent }
+\newlabel{app:sph_density}{{Appendix~A}{53}{SPH Density-Estimator Sanity Check}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.1}Problem Formulation}{53}{subsection.A.1}\protected@file@percent }
+\newlabel{app:calib_problem}{{Appendix~A.1}{53}{Problem Formulation}{subsection.A.1}{}}
+\newlabel{eq:calib_relation_app}{{A.2}{53}{Problem Formulation}{equation.A.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.2}Experimental Setup}{53}{subsection.A.2}\protected@file@percent }
+\newlabel{app:calib_setup}{{Appendix~A.2}{53}{Experimental Setup}{subsection.A.2}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.3}Sampling Strategy}{54}{subsection.A.3}\protected@file@percent }
+\newlabel{app:sampling_strategy}{{Appendix~A.3}{54}{Sampling Strategy}{subsection.A.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.4}Effective Density}{54}{subsection.A.4}\protected@file@percent }
+\newlabel{app:effective_density}{{Appendix~A.4}{54}{Effective Density}{subsection.A.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.5}Results and Analysis}{54}{subsection.A.5}\protected@file@percent }
+\newlabel{app:calib_results}{{Appendix~A.5}{54}{Results and Analysis}{subsection.A.5}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~A.6}Discussion}{55}{subsection.A.6}\protected@file@percent }
+\newlabel{app:calib_discussion}{{Appendix~A.6}{55}{Discussion}{subsection.A.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix~B}Hazard Intensity Model: Parameter-Response Illustration}{55}{appendix.B}\protected@file@percent }
+\newlabel{sm:hazard_sensitivity}{{Appendix~B}{55}{Hazard Intensity Model: Parameter-Response Illustration}{appendix.B}{}}
+\citation{Sethian1996FastMarching,Zhao2005FastSweeping}
+\citation{Zhao2005FastSweeping}
+\citation{Rothermel1972}
+\citation{McGrattan2013FDS}
+\citation{Purser1989FED}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.1}Arrival-Time Field}{56}{subsection.B.1}\protected@file@percent }
+\newlabel{sec:hazard_arrival_time}{{Appendix~B.1}{56}{Arrival-Time Field}{subsection.B.1}{}}
+\newlabel{eq:traveltime}{{B.1}{56}{Arrival-Time Field}{equation.B.1}{}}
+\newlabel{eq:eikonal}{{B.2}{56}{Arrival-Time Field}{equation.B.2}{}}
+\newlabel{eq:relax_update}{{B.3}{56}{Arrival-Time Field}{equation.B.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.2}Time-Dependent Hazard Intensity and Hard Blocking}{56}{subsection.B.2}\protected@file@percent }
+\newlabel{sec:hazard_intensity}{{Appendix~B.2}{56}{Time-Dependent Hazard Intensity and Hard Blocking}{subsection.B.2}{}}
+\newlabel{eq:intensity_piecewise}{{B.4}{56}{Time-Dependent Hazard Intensity and Hard Blocking}{equation.B.4}{}}
+\def\@LN@column{1}
+\newlabel{eq:blocking}{{B.5}{57}{Time-Dependent Hazard Intensity and Hard Blocking}{equation.B.5}{}}
+\newlabel{eq:block_time}{{B.6}{57}{Time-Dependent Hazard Intensity and Hard Blocking}{equation.B.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.3}Baseline Configuration}{57}{subsection.B.3}\protected@file@percent }
+\newlabel{sm:baseline_config}{{Appendix~B.3}{57}{Baseline Configuration}{subsection.B.3}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.4}Temporal Response Curves}{58}{subsection.B.4}\protected@file@percent }
+\newlabel{sm:temporal_curves}{{Appendix~B.4}{58}{Temporal Response Curves}{subsection.B.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.14}{\ignorespaces Effect of $\tau _{\mathrm  {rise}}$ on post-arrival intensity ramp-up. Smaller $\tau _{\mathrm  {rise}}$ produces faster escalation (shorter grace period after $t = T_h$); larger values yield smoother saturation.}}{58}{figure.14}\protected@file@percent }
+\newlabel{fig:sm_tau_rise}{{B.14}{58}{Effect of $\tau _{\mathrm {rise}}$ on post-arrival intensity ramp-up. Smaller $\tau _{\mathrm {rise}}$ produces faster escalation (shorter grace period after $t = T_h$); larger values yield smoother saturation}{figure.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.15}{\ignorespaces Effect of $\tau _{\mathrm  {pre}}$ on pre-arrival leakage. Larger $\tau _{\mathrm  {pre}}$ implies slower decay ahead of the front, producing stronger early exposure and reducing the effective safe-time margin before nominal arrival.}}{59}{figure.15}\protected@file@percent }
+\newlabel{fig:sm_tau_pre}{{B.15}{59}{Effect of $\tau _{\mathrm {pre}}$ on pre-arrival leakage. Larger $\tau _{\mathrm {pre}}$ implies slower decay ahead of the front, producing stronger early exposure and reducing the effective safe-time margin before nominal arrival}{figure.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.16}{\ignorespaces Effect of $\alpha _{\mathrm  {pre}}$ on arrival-level intensity ($R_0 = \alpha _{\mathrm  {pre}} R_{\max }$). Higher $\alpha _{\mathrm  {pre}}$ lifts the entire post-arrival trajectory and increases the time-integrated intensity at a fixed observation point and time window.}}{59}{figure.16}\protected@file@percent }
+\newlabel{fig:sm_alpha_pre}{{B.16}{59}{Effect of $\alpha _{\mathrm {pre}}$ on arrival-level intensity ($R_0 = \alpha _{\mathrm {pre}} R_{\max }$). Higher $\alpha _{\mathrm {pre}}$ lifts the entire post-arrival trajectory and increases the time-integrated intensity at a fixed observation point and time window}{figure.16}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.17}{\ignorespaces Effect of propagation speed $v_{\mathrm  {open}}$ on the temporal response at a fixed observation point. Faster propagation shifts the arrival time $T_h$ earlier (curve shifts left), shrinking the available evacuation window. The temporal shape of the response ($\tau _{\mathrm  {pre}}$, $\tau _{\mathrm  {rise}}$) remains unchanged; only the response is shifted earlier without changing its shape in relative time.}}{60}{figure.17}\protected@file@percent }
+\newlabel{fig:sm_speed}{{B.17}{60}{Effect of propagation speed $v_{\mathrm {open}}$ on the temporal response at a fixed observation point. Faster propagation shifts the arrival time $T_h$ earlier (curve shifts left), shrinking the available evacuation window. The temporal shape of the response ($\tau _{\mathrm {pre}}$, $\tau _{\mathrm {rise}}$) remains unchanged; only the response is shifted earlier without changing its shape in relative time}{figure.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.5}Spatial Footprint: Propagation Speed Sweep}{60}{subsection.B.5}\protected@file@percent }
+\newlabel{sm:spatial_footprint}{{Appendix~B.5}{60}{Spatial Footprint: Propagation Speed Sweep}{subsection.B.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.18}{\ignorespaces Group~S (propagation speed sweep): field-level response of the hazard footprint. Each column corresponds to a different speed level (S01--S05, increasing $v_{\mathrm  {open}}$ from left to right). Rows show (top)~arrival-time field $T_h(\mathbf  {x})$, (middle)~intensity $R(\mathbf  {x}, t^*)$ at the common evaluation time $t^*=\SI {1800}{s}$, and (bottom)~the hard mask at $R_{\mathrm  {block}}=6.0$. Faster propagation compresses arrival times and expands the near-saturated hazardous region at the same evaluation instant.}}{61}{figure.18}\protected@file@percent }
+\newlabel{fig:sm_groupS_spatial}{{B.18}{61}{Group~S (propagation speed sweep): field-level response of the hazard footprint. Each column corresponds to a different speed level (S01--S05, increasing $v_{\mathrm {open}}$ from left to right). Rows show (top)~arrival-time field $T_h(\mathbf {x})$, (middle)~intensity $R(\mathbf {x}, t^*)$ at the common evaluation time $t^*=\SI {1800}{s}$, and (bottom)~the hard mask at $R_{\mathrm {block}}=6.0$. Faster propagation compresses arrival times and expands the near-saturated hazardous region at the same evaluation instant}{figure.18}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~B.6}Preset Parameter Cases}{62}{subsection.B.6}\protected@file@percent }
+\newlabel{sm:preset_cases}{{Appendix~B.6}{62}{Preset Parameter Cases}{subsection.B.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B.10}{\ignorespaces Twenty preset hazard-parameter cases for one-factor field-response illustration; evacuation outcomes and strategy rankings are not evaluated in these sweeps. Baseline (\texttt  {custom2}): $v_{\mathrm  {open}}\!=\!0.10$\,m/s, $v_{\mathrm  {build}}\!=\!0.05$\,m/s, block\,$=\!0$, $R_{\max }\!=\!10$, $R_{\mathrm  {block}}\!=\!6.0$, $\tau _{\mathrm  {pre}}\!=\!500$\,s, $\tau _{\mathrm  {rise}}\!=\!120$\,s, $\alpha _{\mathrm  {pre}}\!=\!0.30$. All unvaried parameters inherit these baseline values.}}{62}{table.10}\protected@file@percent }
+\newlabel{tab:sm_presets}{{B.10}{62}{Twenty preset hazard-parameter cases for one-factor field-response illustration; evacuation outcomes and strategy rankings are not evaluated in these sweeps. Baseline (\texttt {custom2}): $v_{\mathrm {open}}\!=\!0.10$\,m/s, $v_{\mathrm {build}}\!=\!0.05$\,m/s, block\,$=\!0$, $R_{\max }\!=\!10$, $R_{\mathrm {block}}\!=\!6.0$, $\tau _{\mathrm {pre}}\!=\!500$\,s, $\tau _{\mathrm {rise}}\!=\!120$\,s, $\alpha _{\mathrm {pre}}\!=\!0.30$. All unvaried parameters inherit these baseline values}{table.10}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix~C}Disaster Location Analysis: Tail-Risk Dispersion}{63}{appendix.C}\protected@file@percent }
+\newlabel{sm:disaster_locations}{{Appendix~C}{63}{Disaster Location Analysis: Tail-Risk Dispersion}{appendix.C}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~C.1}Experimental Design}{63}{subsection.C.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {C.11}{\ignorespaces Shipai performance metrics stratified by hazard-source location. Every metric is summarised by $\mu _g[\cdot ]$ within the indicated strategy--location cell. $\Sigma _s$ is reported in $10^6$ risk-score--person--time-step units and $H$ in $10^3$ agent--time-step pairs.}}{63}{table.11}\protected@file@percent }
+\newlabel{tab:sm_hazard_location}{{C.11}{63}{Shipai performance metrics stratified by hazard-source location. Every metric is summarised by $\mu _g[\cdot ]$ within the indicated strategy--location cell. $\Sigma _s$ is reported in $10^6$ risk-score--person--time-step units and $H$ in $10^3$ agent--time-step pairs}{table.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~C.2}Location Effects on Tail Clearance}{63}{subsection.C.2}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.19}{\ignorespaces Evacuation and risk metrics stratified by hazard-source location. NE = near exit; NR = near main road; FR = far from exit and road. Error bars denote 95\,\% bootstrap confidence intervals. \textbf  {(a)} $\mu _g[T_{0.95}]$; \textbf  {(b)} $\mu _g[T_{0.99}]$; \textbf  {(c)} $\mu _g[\Sigma _s]$; \textbf  {(d)} $\mu _g[H]$ in unscaled agent--time-step pairs.}}{64}{figure.19}\protected@file@percent }
+\newlabel{fig:sm_hz_bars}{{C.19}{64}{Evacuation and risk metrics stratified by hazard-source location. NE = near exit; NR = near main road; FR = far from exit and road. Error bars denote 95\,\% bootstrap confidence intervals. \textbf {(a)} $\mu _g[T_{0.95}]$; \textbf {(b)} $\mu _g[T_{0.99}]$; \textbf {(c)} $\mu _g[\Sigma _s]$; \textbf {(d)} $\mu _g[H]$ in unscaled agent--time-step pairs}{figure.19}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.20}{\ignorespaces Strategy--location interaction plots for tail clearance and exposure metrics. Shaded bands denote 95\,\% bootstrap confidence intervals. Tail clearance varies modestly by source class, whereas the risk metrics respond strongly to hazard-source placement.}}{65}{figure.20}\protected@file@percent }
+\newlabel{fig:sm_hz_interaction}{{C.20}{65}{Strategy--location interaction plots for tail clearance and exposure metrics. Shaded bands denote 95\,\% bootstrap confidence intervals. Tail clearance varies modestly by source class, whereas the risk metrics respond strongly to hazard-source placement}{figure.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~C.3}Location Effects on Soft Risk and Hard Harm}{65}{subsection.C.3}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.21}{\ignorespaces Percentage improvement relative to the Static baseline by strategy and hazard-source location. Positive values indicate lower tail clearance time, Soft Risk, or Hard Harm. The DH-60 panel shows the largest Soft Risk reduction in FR and complete mean Hard Harm elimination in NR.}}{66}{figure.21}\protected@file@percent }
+\newlabel{fig:sm_hz_reduction}{{C.21}{66}{Percentage improvement relative to the Static baseline by strategy and hazard-source location. Positive values indicate lower tail clearance time, Soft Risk, or Hard Harm. The DH-60 panel shows the largest Soft Risk reduction in FR and complete mean Hard Harm elimination in NR}{figure.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.22}{\ignorespaces Run-level dispersion of $T_{0.95}^{(k)}$ and $\Sigma _s^{(k)}$ by hazard-source location. Points are individual runs, violins show distributional shape, and median bars summarise central tendency. The exposure distributions are more location-sensitive than the clearance-time distributions.}}{67}{figure.22}\protected@file@percent }
+\newlabel{fig:sm_hz_violin}{{C.22}{67}{Run-level dispersion of $T_{0.95}^{(k)}$ and $\Sigma _s^{(k)}$ by hazard-source location. Points are individual runs, violins show distributional shape, and median bars summarise central tendency. The exposure distributions are more location-sensitive than the clearance-time distributions}{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.23}{\ignorespaces Improvement rates relative to Static routing for Density-60 and DH-60. Error bars propagate bootstrap confidence bounds. The risk-reduction advantage of DH-60 is consistent across locations and largest for the FR source class.}}{68}{figure.23}\protected@file@percent }
+\newlabel{fig:sm_hz_delta}{{C.23}{68}{Improvement rates relative to Static routing for Density-60 and DH-60. Error bars propagate bootstrap confidence bounds. The risk-reduction advantage of DH-60 is consistent across locations and largest for the FR source class}{figure.23}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~C.4}Implications for Tail-Risk Dispersion}{69}{subsection.C.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {Appendix~D}Spatial Diagnostic Toolkit}{69}{appendix.D}\protected@file@percent }
+\newlabel{sm:spatial_diagnostics}{{Appendix~D}{69}{Spatial Diagnostic Toolkit}{appendix.D}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~D.1}Route-use and density-load fields}{69}{subsection.D.1}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~D.2}Congestion indicators}{70}{subsection.D.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~D.3}Aggregated congestion measures}{70}{subsection.D.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~D.4}Static-relative spatial summaries}{70}{subsection.D.4}\protected@file@percent }
+\citation{ester1996density}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {Appendix~D.5}Bottleneck detection}{71}{subsection.D.5}\protected@file@percent }
+\def\@LN@column{1}
+\bibstyle{elsarticle-harv}
+\bibdata{reference}
+\bibcite{Al2014Villages_UHPress}{{1}{2014}{{Al}}{{}}}
+\bibcite{Berggold2026MLReview}{{2}{2026}{{Berggold et~al.}}{{Berggold, {\v {C}}ukarska, Nousias, Dietrich and Borrmann}}}
+\bibcite{BlueAdler2001CA}{{3}{2001}{{Blue and Adler}}{{}}}
+\bibcite{Burstedde2001FloorField}{{4}{2001}{{Burstedde et~al.}}{{Burstedde, Klauck, Schadschneider and Zittartz}}}
+\bibcite{Butters2025Kibera}{{5}{2025}{{Butters and Dawson}}{{}}}
+\bibcite{cao2025mapping}{{6}{2025}{{Cao et~al.}}{{Cao, Tu, Chen and Zhang}}}
+\bibcite{Darvishan2021DynamicReroute}{{7}{2021}{{Darvishan and Lim}}{{}}}
+\bibcite{Ding2024BIMFireEvac}{{8}{2024}{{Ding et~al.}}{{Ding, Xu, Xie, Zheng, Wang, Fan, Li and Liao}}}
+\bibcite{ester1996density}{{9}{1996}{{Ester et~al.}}{{Ester, Kriegel, Sander and Xu}}}
+\bibcite{Golshani2025FireNavigation}{{10}{2025}{{Golshani and Fang}}{{}}}
+\def\@LN@column{1}
+\bibcite{guangzhouTianhe2023ShipaiMap}{{11}{2023}{{Guangzhou Tianhe Release}}{{}}}
+\bibcite{Guo2024StampedeTerrorist}{{12}{2024}{{Guo et~al.}}{{Guo, Huo, Li, Li and Zhang}}}
+\bibcite{dias2022bend}{{13}{2022}{{Hannun et~al.}}{{Hannun, Dias, Taha, Almutairi, Alhajyaseen, Sarvi and Al-Bosta}}}
+\bibcite{He2024DynamicMultiHazardEvac}{{14}{2024a}{{He et~al.}}{{He, Shen, Lan and Weng}}}
+\bibcite{He2024RiskPerceptionPath}{{15}{2024b}{{He et~al.}}{{He, Shen, Lan and Weng}}}
+\bibcite{Helbing1995SocialForce}{{16}{1995}{{Helbing and Moln{\'a}r}}{{}}}
+\bibcite{Huang2023DSA_DDQN}{{17}{2023}{{Huang et~al.}}{{Huang, Liang, Xiao, Fang, Li and Ye}}}
+\bibcite{Hughes2002Continuum}{{18}{2002}{{Hughes}}{{}}}
+\bibcite{Kim2023RadiologicalEvac}{{19}{2023}{{Kim and Heo}}{{}}}
+\bibcite{Kretz2009DynamicPotential}{{20}{2009}{{Kretz}}{{}}}
+\bibcite{Kuligowski2025Humanitarian}{{21}{2025}{{Kuligowski et~al.}}{{Kuligowski, Gwynne, Xie, Westbury, Antonellis and Pongratz}}}
+\def\@LN@column{1}
+\bibcite{Li2023ELMEvacRisk}{{22}{2023}{{Li et~al.}}{{Li, Ma, Zhang, Wang, Guo, He, Xu and Xie}}}
+\bibcite{Lin2011GuangzhouVIC}{{23}{2011}{{Lin et~al.}}{{Lin, De~Meulder and Wang}}}
+\bibcite{Liu2025LiDARInformal}{{24}{2025}{{Liu et~al.}}{{Liu, Jang, Dimitrov, Ferreira~Barbalho, Duarte and Ratti}}}
+\bibcite{Liu2022EvacAccessibility}{{25}{2022}{{Liu et~al.}}{{Liu, Li, Zhang and Yu}}}
+\bibcite{Lovreglio2019SamplingConvergence}{{26}{2019}{{Lovreglio et~al.}}{{Lovreglio, Spearpoint and Girault}}}
+\bibcite{Lu2026HumanAI}{{27}{2026}{{Lu et~al.}}{{Lu, Zhang, Xie and Huang}}}
+\bibcite{Luan2025ToxicGasAirport}{{28}{2025}{{Luan et~al.}}{{Luan, Gai, Sun and Dong}}}
+\bibcite{Ma2024AirportPassengerFlow}{{29}{2024}{{Ma et~al.}}{{Ma, Huang, Jiang, Wang, Luo and Zhang}}}
+\bibcite{McGrattan2013FDS}{{30}{2013}{{McGrattan et~al.}}{{McGrattan, McDermott, Weinschenk and Forney}}}
+\def\@LN@column{1}
+\bibcite{Monaghan1992SPH}{{31}{1992}{{Monaghan}}{{}}}
+\bibcite{muller2003particle}{{32}{2003}{{M{\"u}ller et~al.}}{{M{\"u}ller, Charypar and Gross}}}
+\bibcite{pixelNotes2019Shipai}{{33}{2019}{{Pixel Notes}}{{}}}
+\bibcite{Purser1989FED}{{34}{1989}{{Purser}}{{}}}
+\bibcite{Rockafellar2002CVaR}{{35}{2002}{{Rockafellar and Uryasev}}{{}}}
+\bibcite{Rothermel1972}{{36}{1972}{{Rothermel}}{{}}}
+\bibcite{Sethian1996FastMarching}{{37}{1996}{{Sethian}}{{}}}
+\bibcite{seyfried2005fundamental}{{38}{2005}{{Seyfried et~al.}}{{Seyfried, Steffen, Klingsch and Boltes}}}
+\bibcite{Treuille2006ContinuumCrowds}{{39}{2006}{{Treuille et~al.}}{{Treuille, Cooper and Popovi{\'c}}}}
+\bibcite{Wang2022RoRoEvac}{{40}{2022}{{Wang et~al.}}{{Wang, Liu, Loughney, Yang, Wang and Wang}}}
+\def\@LN@column{1}
+\bibcite{weidmann1993fundamental}{{41}{1993}{{Weidmann}}{{}}}
+\bibcite{Yang2025MetroStampede}{{42}{2025}{{Yang et~al.}}{{Yang, Xie, Zhao and Jia}}}
+\bibcite{Yuan2022SafetyBarrierEvac}{{43}{2022}{{Yuan et~al.}}{{Yuan, Cai, Reniers, Yang, Chen and Wu}}}
+\bibcite{Zhang2024SimOptGuidance}{{44}{2024}{{Zhang et~al.}}{{Zhang, Lo, Fang, Xie, Tang and Lo}}}
+\bibcite{zhang2012turning}{{45}{2012}{{Zhang et~al.}}{{Zhang, Klingsch, Rupprecht, Schadschneider and Seyfried}}}
+\bibcite{zhang2013tjunction}{{46}{2013}{{Zhang et~al.}}{{Zhang, Klingsch, Schadschneider and Seyfried}}}
+\bibcite{zhang2013empirical}{{47}{2013}{{Zhang and Seyfried}}{{}}}
+\bibcite{Zhao2005FastSweeping}{{48}{2005}{{Zhao}}{{}}}
+\def\@LN@column{1}
+\gdef \@abspage@last{77}

@@ -1,0 +1,12 @@
+width=287
+height=465
+cellSize=1
+x_min=0
+y_min=0
+src_width=2862
+src_height=4648
+src_cellSize=0.1
+channels=19
+update_grid_num=0
+soft_risk=1.04164e+06
+hard_harm=0

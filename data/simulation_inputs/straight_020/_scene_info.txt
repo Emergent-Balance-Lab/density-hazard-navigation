@@ -1,0 +1,14 @@
+scene_name = straight
+scene_index = 20
+width_m = 4.000
+n_exits = 1
+density_sampled = 5.0000
+people = 1240
+safearea_count = 1
+boundary_points = 4
+building_count = 4480
+walk_area = 248.000
+boundary_area = 528.000
+obstacle_area = 280.000
+boundary_expand_m = 2.000
+obstacle_cell_size = 0.250

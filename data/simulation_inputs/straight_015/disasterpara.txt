@@ -1,0 +1,19 @@
+# -----------------------------
+# Hazard parameters
+# Format: key = value
+# Comments: start with #
+# Units: v_* in m/s, time in seconds
+# -----------------------------
+
+v_open = 0.12
+v_build = 0.06
+block_building = 0
+
+Rmax = 10.0
+tau_pre = 500.0
+tau_rise = 120.0
+R_block = 9.0
+
+alpha_pre = 0.3
+
+INF = 1e30

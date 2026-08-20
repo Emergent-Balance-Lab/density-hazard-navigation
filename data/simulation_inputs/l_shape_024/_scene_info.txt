@@ -1,0 +1,14 @@
+scene_name = l_shape
+scene_index = 24
+width_m = 5.000
+n_exits = 1
+density_sampled = 5.0000
+people = 1550
+safearea_count = 1
+boundary_points = 6
+building_count = 4544
+walk_area = 310.000
+boundary_area = 594.000
+obstacle_area = 284.000
+boundary_expand_m = 2.000
+obstacle_cell_size = 0.250

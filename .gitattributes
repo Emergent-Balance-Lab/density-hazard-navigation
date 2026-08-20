@@ -1,0 +1,16 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+
+# Large analytical artifacts: use Git LFS for the public repository.
+results/simulation/**/*.bin filter=lfs diff=lfs merge=lfs -text
+results/simulation/**/run_record.csv filter=lfs diff=lfs merge=lfs -text
+results/analysis/**/*.npz filter=lfs diff=lfs merge=lfs -text
+results/analysis/update_period_analysis/update_period_backtracking_agent_level.csv filter=lfs diff=lfs merge=lfs -text
+figure_sources/**/*.pptx filter=lfs diff=lfs merge=lfs -text
+paper_reference/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+paper_reference/**/*.png filter=lfs diff=lfs merge=lfs -text
+results/analysis/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+results/analysis/**/*.png filter=lfs diff=lfs merge=lfs -text

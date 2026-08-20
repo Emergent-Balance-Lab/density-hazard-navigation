@@ -1,0 +1,14 @@
+scene_name = t_shape
+scene_index = 2
+width_m = 1.000
+n_exits = 1
+density_sampled = 5.0000
+people = 458
+safearea_count = 1
+boundary_points = 8
+building_count = 6176
+walk_area = 91.500
+boundary_area = 477.500
+obstacle_area = 386.000
+boundary_expand_m = 2.000
+obstacle_cell_size = 0.250

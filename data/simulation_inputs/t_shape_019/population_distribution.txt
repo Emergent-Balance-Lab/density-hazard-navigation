@@ -1,0 +1,37 @@
+# ==================================================
+# Population macro-distribution configuration
+# Auto-generated from boundary.shp
+# ==================================================
+
+# MODE_ID = 2
+# MODE = center
+# BOUNDARY_WIDTH  = 255.465
+# BOUNDARY_HEIGHT = 431.093
+# BOUNDARY_DIAG   = 501.103
+
+# ---------- Global switch ----------
+ENABLE_UNIFORM      = 0
+ENABLE_GRADIENT     = 0
+ENABLE_POINT_SOURCE = 1
+ENABLE_LINE_SOURCE  = 0
+
+# ---------- Mixture weights ----------
+W_UNIFORM      = 0.0000
+W_GRADIENT     = 0.0000
+W_POINT_SOURCE = 1.0000
+W_LINE_SOURCE  = 0.0000
+
+# ---------- Uniform ----------
+UNIFORM_BASE = 1.00
+
+# ---------- Gradient ----------
+GRADIENT_DIRECTION = NORTH_SOUTH
+GRADIENT_ALPHA = 0.00
+
+# ---------- Point sources ----------
+POINT_SOURCE_COUNT = 1
+POINT_SOURCE_0 = 536.01, 271.10, 90.20, 1.00
+
+# ---------- Line sources ----------
+LINE_SOURCE_SIGMA = 0.00
+LINE_SOURCE_WEIGHT = 0.00
