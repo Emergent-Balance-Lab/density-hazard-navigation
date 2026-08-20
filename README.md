@@ -16,13 +16,12 @@ Engineering & System Safety*, 277 (2027), 113181.
 - **Personal website:** [https://chun-song.com](https://chun-song.com)
 - **Personal GitHub account (shyr):**
   [Shyr0796](https://github.com/Shyr0796)
-- **Personal repository:**
-  [Shyr0796/density-hazard-navigation](https://github.com/Shyr0796/density-hazard-navigation)
-- **EBL Laboratory repository:**
+- **Canonical EBL Laboratory repository:**
   [rui-research/density-hazard-navigation](https://github.com/rui-research/density-hazard-navigation)
 
-The same versioned research package is maintained in both the author's
-personal repository and the EBL Laboratory repository.
+The EBL Laboratory repository is the sole canonical location for the complete
+code, data, and figure package. Personal or laboratory-profile repositories
+should contain only a short README that redirects readers to this repository.
 
 ## Reproducibility package
 

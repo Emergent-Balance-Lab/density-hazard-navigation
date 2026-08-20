@@ -51,9 +51,9 @@ reproduction.
 The assembled folder is approximately 1.7 GB. Git LFS patterns are supplied in
 `.gitattributes` for large run-level CSVs, spatial binaries, images, PDFs, NPZ
 files, and editable PPTX sources. The release branch preserves the existing EBL
-Laboratory repository history and is configured for mirrored publication to
-the author repository `Shyr0796/density-hazard-navigation` and the EBL
-Laboratory repository `rui-research/density-hazard-navigation`.
+Laboratory repository history. The EBL repository
+`rui-research/density-hazard-navigation` is the sole canonical location for the
+complete package; other repositories may contain redirect-only README files.
 
 The publisher-formatted Elsevier PDF was inspected for bibliographic metadata
 but excluded from version control because it states that all rights are
