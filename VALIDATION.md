@@ -4,10 +4,6 @@ Validation date: 2026-08-20 (Asia/Shanghai).
 
 ## Structural checks
 
-- 24/24 `includegraphics` paths extracted from `paper_reference/manuscript.tex`
-  exist in the package.
-- 24/24 submitted figure SHA-256 checks passed against
-  `SHA256SUMS_PAPER_FIGURES.txt`.
 - 695/695 run directories contain `metrics_summary.json`, `alive_series.csv`,
   `run_record.csv`, and `bin/meta.txt`.
 - Shipai spatial data include 150 layer-7 files, 150 layer-8 files, 150

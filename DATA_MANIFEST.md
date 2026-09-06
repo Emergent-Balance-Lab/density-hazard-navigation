@@ -48,9 +48,9 @@ is retained as the shared road-network mask.
 - Shipai global spatial statistics and mean-field NPZ;
 - diagnostic tables, manuscript checks, and current generated figures.
 
-The exact submitted figures are kept separately under
-`paper_reference/figures/`; current generated figures are not silently
-substituted for them.
+Generated analytical figures may be present under `results/analysis/`. The
+manuscript source and submitted-reference figure bundle are not distributed in
+this repository.
 
 ## Inputs retained
 
@@ -74,5 +74,5 @@ versioned external dataset, with checksums and a stable DOI/URL.
 
 The 20 `main_disaster_para_*` raw field directories referenced by
 `hazard_raster_visualization.py` were not present in the source workspace at
-packaging time. The exact submitted Figure 18 is retained, but those missing
-inputs cannot be reconstructed from this folder.
+packaging time. The corresponding figure is not distributed here, and those
+missing inputs cannot be reconstructed from this folder.
