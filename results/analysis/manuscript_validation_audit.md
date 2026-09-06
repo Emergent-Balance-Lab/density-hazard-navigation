@@ -22,8 +22,8 @@ calibration values, and update-period headline means are consistent with the
 underlying analysis data.
 
 The main problem is the simplified-network beta-sensitivity section: the
-manuscript beta sweep for beta = 0.1, 0.5, 5, and 10 matches the archived
-`latex_macro.tex`, but that archived table was produced from a partial
+manuscript beta sweep for beta = 0.1, 0.5, 5, and 10 matches a previously
+generated archived table, but that table was produced from a partial
 `paired_samples.csv` and interpolated the missing strategies. It does not match
 the current actual `results/simulation/risk_*` runs. This affects
 Table `tab:beta_sensitivity`, the beta-sweep prose, Figure
